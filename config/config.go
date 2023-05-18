@@ -26,6 +26,9 @@ type File struct {
 	ExcelPrefixUrl string `yaml:"excelPrefixUrl"`
 }
 
+type Email struct {
+}
+
 var SettingFile = &Global{}
 
 func SetUP() {

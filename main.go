@@ -14,6 +14,7 @@ func main() {
 	config.SetUP()
 
 	r := gin.Default()
+	r.Use(config.Cors())
 	r.StaticFS("/imgs/", http.Dir(util.ImgUtil.GetSavePath("")))
 	r.GET("/remove/:imgName", upload.RemoveFile)
 	r.POST("/imgUpload", upload.ImgUpload)
